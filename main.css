@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 :root {
-  --clr-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
   --clr-pale-blue: hsl(243, 100%, 93%);
   --clr-grayish-blue: hsl(229, 7%, 55%);
   --clr-dark-blue: hsl(228, 56%, 26%);
@@ -17,6 +16,7 @@
 }
 
 body {
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   background-image: url(images/bg-mobile.png);
   background-color: var(--clr-very-dark-blue);
@@ -31,8 +31,10 @@ img {
 .container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .head {
@@ -61,4 +63,99 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.usage {
+  position: relative;
+  width: 350px;
+  padding: 2rem;
+  background-color: var(--clr-dark-blue);
+  border-radius: 0.75rem;
+  color: var(--clr-pale-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.usage h1 {
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.usage h1 span {
+  font-weight: 700;
+}
+.progress {
+  position: relative;
+  width: 260px;
+  height: 20px;
+  background-color: var(--clr-very-dark-blue);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+.progress::before {
+  content: "";
+  position: absolute;
+  width: 81%;
+  background: rgb(255, 163, 153);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 163, 153, 1) 0%,
+    rgba(255, 77, 151, 1) 100%
+  );
+  border-radius: 10px;
+  top: 0.2rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr-pale-blue);
+  border-radius: 50%;
+  top: 0.325rem;
+  right: 48px;
+}
+
+.usage-min-max {
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: var(--clr-pale-blue);
+  margin-bottom: 2rem;
+}
+
+.usage-left {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--clr-pale-blue);
+  text-transform: uppercase;
+  border-radius: 0.75rem;
+  bottom: -39.5px;
+}
+
+.usage-left h2 {
+  font-size: 2.5rem;
+  color: var(--clr-very-dark-blue);
+}
+.usage-left p {
+  color: var(--clr-grayish-blue);
+  font-weight: 700;
+}
+
+@media (min-width: 375px) {
+  body {
+    background-size: cover;
+  }
 }
