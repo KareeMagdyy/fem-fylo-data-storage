@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --clr-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --clr-pale-blue: hsl(243, 100%, 93%);
+  --clr-grayish-blue: hsl(229, 7%, 55%);
+  --clr-dark-blue: hsl(228, 56%, 26%);
+  --clr-very-dark-blue: hsl(229, 57%, 11%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  background-image: url(images/bg-mobile.png);
+  background-color: var(--clr-very-dark-blue);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head {
+  min-width: 350px;
+  padding: 40px;
+  background-color: var(--clr-dark-blue);
+  border-radius: 0.75rem 5rem 0.75rem 0.75rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.files {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.img-container {
+  background-color: var(--clr-very-dark-blue);
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
