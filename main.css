@@ -31,6 +31,12 @@ img {
 .container {
   min-height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -157,5 +163,72 @@ img {
 @media (min-width: 375px) {
   body {
     background-size: cover;
+  }
+}
+
+@media (min-width: 989px) {
+  body {
+    background-size: cover;
+    background-position: top 50vh left;
+    background-image: url(images/bg-desktop.png);
+  }
+
+  .wrapper {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 100%;
+    max-width: 920px;
+  }
+
+  .head {
+    width: 40%;
+  }
+
+  .usage {
+    width: 60%;
+    align-items: flex-start;
+    padding: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .usage h1 {
+    font-size: 1.2rem;
+  }
+
+  .progress,
+  .usage-min-max {
+    width: 100%;
+  }
+
+  .progress::after {
+    right: 85px;
+  }
+
+  .usage-min-max {
+    margin: 0;
+  }
+
+  .usage-left {
+    bottom: auto;
+    top: -50px;
+    right: 2.5rem;
+  }
+
+  .usage-left {
+    border-end-end-radius: 0;
+  }
+
+  .usage-left::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 10px solid var(--clr-pale-blue);
+    border-top: 10px solid var(--clr-pale-blue);
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: 0;
+    bottom: -20px;
   }
 }
