@@ -69,6 +69,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.img-container img {
+  transition: 400ms;
+}
+
+.img-container:hover.img-container img {
+  transform: scale(1.45);
 }
 
 .usage {
